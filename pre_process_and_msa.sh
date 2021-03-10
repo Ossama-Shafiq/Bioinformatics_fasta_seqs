@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-
+set -e
 # Here automatically retreive a database in this case the pdbaa database for use in the blast command
 mkdir DB/
 wget http://evomics.org/wp-content/uploads/2013/01/blastplus.zip -P ./DB/
