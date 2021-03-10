@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-
+# Here automatically retreive a database in this case the pdbaa database for use in the blast command
 mkdir DB/
 wget http://evomics.org/wp-content/uploads/2013/01/blastplus.zip -P ./DB/
 unzip DB/blastplus.zip -d ./DB/
@@ -30,6 +30,7 @@ done
 
 #Combine both fasta files
 cat *.fasta > combined_sequences.fasta
+# Using muscle we can output 2 alignments one default and one with clustalw format
 muscle -in combined_sequences.fasta -out normal_aligned.aln
 muscle -in combined_sequences.fasta -out clustal_aligned.aln -clw
 
